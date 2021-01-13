@@ -27,5 +27,8 @@ jobs:
         helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor/
         helm repo update
         kubectl create namespace snyk-monitor
+        kubectl create secret generic snyk-monitor -n snyk-monitor --from-literal=dockercfg.json={} --from-literal=integrationId=${{ secrets.SNYK_INTEGRATION_ID }}
+        kubectl create configmap snyk-monitor-registries-conf -n snyk-monitor --from-file=config/registry.conf
+        helm upgrade --install snyk-monitor snyk-charts/snyk-monitor --namespace snyk-monitor --set clusterName="Spring-Petclinic cluster" 
         
 
