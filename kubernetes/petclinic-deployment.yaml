@@ -4,9 +4,6 @@ metadata:
   name: petclinic
   labels:
     app: petclinic
-    tags.datadoghq.com/env: "production"
-    tags.datadoghq.com/service: "petclinic2"
-    tags.datadoghq.com/version: "v3.0"
 spec:
   replicas: 3
   selector:
@@ -16,13 +13,10 @@ spec:
     metadata:
       labels:
         app: petclinic
-        tags.datadoghq.com/env: "production"
-        tags.datadoghq.com/service: "petclinic2"
-        tags.datadoghq.com/version: "v3.0"
     spec:
       containers:
       - name: petclinic
-        image: omearaj/spring-petclinic-dd:main
+        image: omearaj/spring-petclinic-snyk-kube:main
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
