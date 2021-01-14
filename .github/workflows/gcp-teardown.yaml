@@ -21,6 +21,4 @@ jobs:
         export_default_credentials: true
     - run: |-
         gcloud container clusters get-credentials ${{secrets.GKE_CLUSTER_NAME}} --zone=${{ env.zone }}
-        kubectl delete -f kubernetes/petclinic-deployment.yaml
-        kubectl delete -f kubernetes/petclinic-svc.yaml
         gcloud container clusters delete ${{secrets.GKE_CLUSTER_NAME}} --zone=us-central1-c --quiet
