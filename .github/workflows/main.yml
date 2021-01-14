@@ -9,11 +9,13 @@ on:
       - kubernetes/**
       - .github/workflows/**
       - '**.md'
+      - images/**
   pull_request:
     paths-ignore:
       - kubernetes/**
       - .github/workflows/**
       - '**.md'
+      - images/**
 
 env:
   # TODO: Change registry URL if not using Docker Hub
