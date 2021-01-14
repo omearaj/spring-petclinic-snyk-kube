@@ -9,7 +9,7 @@ This version of Spring Petclinic deploys to Kubernetes. The pipelines leverage G
 A detailed list of each pipeline with description, requirements, and how to trigger the pipeline
 
 ### Build and Push Image
-The pipeline builds the SPC artifact, the container image, and pushes the Image to Docker Hub. The pipeline defines the container image registry and repo in the pipeline. 
+![Pipelines](images/pipelines.png)The pipeline builds the SPC artifact, the container image, and pushes the Image to Docker Hub. The pipeline defines the container image registry and repo in the pipeline. 
 
 **Trigger:** On Push or PR based on directory. 
 Ignored directories 
