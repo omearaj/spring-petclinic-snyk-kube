@@ -14,7 +14,6 @@ The pipeline builds the SPC artifact, the container image, and pushes the Image 
 Ignored directories 
  * kubernetes/** 
  * .github/workflows/** 
- * datadog/** 
 
 **Required Secrets:** 
 Docker_Key - Docker API Key
